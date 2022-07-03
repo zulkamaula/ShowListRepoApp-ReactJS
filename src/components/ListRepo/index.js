@@ -19,9 +19,9 @@ function ListRepo() {
 
     }, [findListRepoResult, dispatch])
 
-    const visitRepo = url => {
-        window.open(url, '_blank')
-    }
+    // const visitRepo = url => {
+    //     window.open(url, '_blank')
+    // }
 
     const textInfo = {
         fontWeight: '600',
@@ -89,7 +89,7 @@ function ListRepo() {
                                         </div>
 
                                     </div>
-                                    <div className='col align-self-center' style={{ cursor: 'pointer' }} onClick={visitRepo(repo.url)}>
+                                    <div className='col align-self-center' style={{ cursor: 'pointer' }} onClick={window.open(repo.html_url, '_blank')}>
                                         <div style={{ fontSize: '2vmax' }}>
                                             ➦
                                         </div>
