@@ -19,6 +19,10 @@ function ListRepo() {
 
     }, [findListRepoResult, dispatch])
 
+    const visitRepo = url => {
+        window.open(url, '_blank')
+    }
+
     const textInfo = {
         fontWeight: '600',
         fontStyle: 'italic',
@@ -85,7 +89,7 @@ function ListRepo() {
                                         </div>
 
                                     </div>
-                                    <div className='col align-self-center' style={{ cursor: 'pointer' }}>
+                                    <div className='col align-self-center' style={{ cursor: 'pointer' }} onClick={visitRepo(repo.url)}>
                                         <div style={{ fontSize: '2vmax' }}>
                                             ➦
                                         </div>
